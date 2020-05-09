@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+</head>
+<body>
+    <button>Add Box</button>
+    <div class = "container"></div>
+    <ul class = "nameList"></ul>
+    <input type="text" name="name" /> 
+    <button class = "add">Add name</button>
+    <ul class = "inputList"></ul>
+
+    <script>
+        // 1º Exercício
+        var sqBtnElement = document.querySelector('button');
+        sqBtnElement.onclick = function createBox() { 
+            var boxElement = document.createElement('div');
+            boxElement.setAttribute('class', 'box');
+            boxElement.style.display = 'inline-block';
+            boxElement.style.margin = '5px 5px 5px 0';
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.borderRadius = '3px';
+            boxElement.style.boxShadow = '1px 1px 3px #000';
+            boxElement.style.backgroundColor = 'white';
+            boxElement.style.transition = 'All 1s ease';
+
+            boxElement.onmouseover = function () {
+                boxElement.style.backgroundColor = getRandomColor();
+            }
+
+            var boxCreate = document.querySelector('.container');
+            boxCreate.appendChild(boxElement);
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+            var newColor = getRandomColor();
+        
+        // 3º Exercício
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        for (var i = 0; i < nomes.length; i++) {
+            var listElement = document.createElement('li');
+
+            var textElement = document.createTextNode(nomes[i]);
+            listElement.appendChild(textElement);
+
+            var ulElement = document.querySelector('ul');
+            ulElement.appendChild(listElement);
+        }
+
+        // 4º Exercício
+        var inputElement = document.querySelector('input[name=name]');
+        var addElement = document.querySelector('.add');
+        addElement.onclick = function adicionar() {
+            var txt = inputElement.value;
+            
+            var liElement = document.createElement('li');
+
+            var txtElement = document.createTextNode(txt);
+            liElement.appendChild(txtElement);
+
+            var ulElement = document.querySelector('.inputList');
+            ulElement.appendChild(liElement);
+
+            inputElement.value = "";
+        }
+    </script>
+</body>
+</html>
