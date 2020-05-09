@@ -16,8 +16,9 @@ Aqui se encontram os enunciados para os exercícios do módulo 1.
 Aqui se encontram os enunciados para os exercícios do módulo 2.
 
 ## Módulo 3 - App de To-do
-Mini app de lista de afazeres, que produzi seguindo o curso.
+[App de To-dos](https://github.com/lucasbpereira/App-de-Todos)
+Mini app de lista de afazeres, que produzi seguindo o curso disponibilizado também no GitHub.
 
 ## Módulo 4 - JS Assíncrono
-[Exercícios: Módulo 01](https://skylab.rocketseat.com.br/api/files/1566499182493.pdf)
+[Exercícios: Módulo 04](https://skylab.rocketseat.com.br/api/files/1566499182493.pdf)
 Aqui se encontram os enunciados para os exercícios do módulo 4.
